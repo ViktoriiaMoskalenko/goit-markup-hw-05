@@ -401,22 +401,21 @@ img {
   height: 92px;
   margin: 0;
   border: 1px solid #afb1b8;
+  border-radius: 4px;
+  color: #afb1b8;
 
-  transition: border 250ms var(--cubic), fill 250ms var(--cubic);
+  transition: border 250ms var(--cubic), color 250ms var(--cubic);
 }
 
 .clients-link:hover,
 .clients-link:focus {
-  border: 1px solid var(--accent-color);
+  border-color: var(--accent-color);
   cursor: pointer;
-}
-.clients-link:hover .icon-clients,
-.clients-link:focus .icon-clients {
-  fill: var(--accent-color);
+  color: var(--accent-color);
 }
 
-.icon-clients {
-  fill: #afb1b8;
+.clients-link .icon-clients {
+  fill: currentColor;
 }
 
 .clients-text {
@@ -446,6 +445,12 @@ img {
   font-size: 14px;
   line-height: 1.7;
   text-decoration: none;
+
+  transition: color 250ms var(--cubic);
+}
+
+.maps-link:hover {
+  color: var(--accent-color);
 }
 
 address {
